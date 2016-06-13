@@ -8,13 +8,13 @@ import (
 )
 
 type MetaData struct {
-	AdminPass        string            `json:'admin_pass'`
-	AvailabilityZone string            `json:'availability_zone'`
-	Hostname         string            `json:'hostname'`
-	LaunchIndex      int               `json:'launch_index'`
-	Name             string            `json:'name'`
-	PublicKeys       map[string]string `json:'public_keys'`
-	UUID             string            `json:'uuid'`
+	AdminPass        string            `json:"admin_pass"`
+	AvailabilityZone string            `json:"availability_zone"`
+	Hostname         string            `json:"hostname"`
+	LaunchIndex      int               `json:"launch_index"`
+	Name             string            `json:"name"`
+	PublicKeys       map[string]string `json:"public_keys"`
+	UUID             string            `json:"uuid"`
 }
 
 func FindMetadata(s servers.Server) MetaData {
