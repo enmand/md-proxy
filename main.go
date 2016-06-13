@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/engine/fasthttp"
 	"github.com/rackspace/gophercloud"
@@ -32,7 +33,7 @@ func main() {
 	ec2g_latest := ec2g.Group("latest")
 	initRoutes(osg, osg_2012, osg_2013, osg_latest, ec2g, ec2g_2009, ec2g_latest)
 
-	e.Run(fasthttp.New(*port))
+	e.Run(fasthttp.New(fmt.Sprintf("%s", *port)))
 }
 
 func initOpenStackProvider() *gophercloud.ProviderClient {
