@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	port   = kingpin.Flag("port", "Port Number").Short('p').Default("8080").Int()
+	port   = kingpin.Flag("port", "Port Number").Short('p').Default(":8080").String()
 	region = kingpin.Flag("region", "OpenStack region name").Short('r').Default("regionOne").String()
 )
 
