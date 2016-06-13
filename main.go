@@ -9,6 +9,7 @@ import (
 	"github.com/rackspace/gophercloud/openstack/compute/v2/servers"
 	"github.com/rackspace/gophercloud/pagination"
 	"gopkg.in/alecthomas/kingpin.v2"
+	"time"
 )
 
 var (
@@ -22,6 +23,14 @@ func main() {
 
 	provider := initOpenStackProvider()
 	fetchServers(provider)
+
+	ticker := time.NewTicker(time.Minute * 1)
+	go func() {
+		for _ = range ticker.C {
+			fmt.Printf("fetching provider data")
+			fetchServers(provider)
+		}
+	}()
 
 	e := echo.New()
 	osg := e.Group("/openstack")
