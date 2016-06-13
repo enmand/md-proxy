@@ -24,14 +24,14 @@ func main() {
 	fetchServers(provider)
 
 	e := echo.New()
-	osg := e.Group("openstack")
-	osg_2012 := osg.Group("2012-08-10")
-	osg_2013 := osg.Group("2013-04-04")
-	osg_latest := osg.Group("latest")
-	ec2g := e.Group("ec2")
-	ec2g_2009 := ec2g.Group("2009-04-04")
-	ec2g_latest := ec2g.Group("latest")
-	initRoutes(osg, osg_2012, osg_2013, osg_latest, ec2g, ec2g_2009, ec2g_latest)
+	osg := e.Group("/openstack")
+	osg_2012 := osg.Group("/2012-08-10")
+	osg_2013 := osg.Group("/2013-04-04")
+	osg_latest := osg.Group("/latest")
+	ec2g := e.Group("/ec2")
+	ec2g_2009 := ec2g.Group("/2009-04-04")
+	ec2g_latest := ec2g.Group("/latest")
+	initRoutes(osg_2012, osg_2013, osg_latest, ec2g_2009, ec2g_latest)
 
 	e.Run(fasthttp.New(fmt.Sprintf("%s", *port)))
 }
