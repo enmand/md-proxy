@@ -1,0 +1,8 @@
+package: github.com/therounds/md-proxy
+import:
+- package: github.com/rackspace/gophercloud
+- package: github.com/labstack/echo
+  subpackages:
+  - ../..
+- package: github.com/valyala/fasthttp
+- package: gopkg.in/alecthomas/kingpin.v2

@@ -1,0 +1,62 @@
+hash: ea36a42c9f06198842c9df9252d1d30f4508107c54f6891b2be5cb8af52d51b4
+updated: 2016-06-13T16:00:33.402951815-03:00
+imports:
+- name: github.com/klauspost/compress
+  version: 14eb9c4951195779ecfbec34431a976de7335b0a
+  subpackages:
+  - flate
+  - gzip
+  - zlib
+- name: github.com/klauspost/cpuid
+  version: 09cded8978dc9e80714c4d85b0322337b0a1e5e0
+- name: github.com/klauspost/crc32
+  version: 19b0b332c9e4516a6370a0456e6182c3b5036720
+- name: github.com/labstack/echo
+  version: 6e183fd3d8063a14da04fa4439c52fb6b84d1cdb
+  subpackages:
+  - ../..
+  - engine/fasthttp
+  - engine
+  - log
+- name: github.com/labstack/gommon
+  version: 722aa12d41c236ce78ff48eac1cafe0107ecdc9d
+  subpackages:
+  - log
+  - color
+- name: github.com/mattn/go-colorable
+  version: 9056b7a9f2d1f2d96498d6d146acd1f9d5ed3d59
+- name: github.com/mattn/go-isatty
+  version: 56b76bdf51f7708750eac80fa38b952bb9f32639
+- name: github.com/mitchellh/mapstructure
+  version: d2dd0262208475919e1a362f675cfc0e7c10e905
+- name: github.com/rackspace/gophercloud
+  version: d47105ce4ef90cea9a14b85c8dd172b760085828
+  subpackages:
+  - openstack
+  - openstack/compute/v2/servers
+  - pagination
+  - openstack/identity/v2/tokens
+  - openstack/identity/v3/tokens
+  - openstack/utils
+  - openstack/compute/v2/flavors
+  - openstack/compute/v2/images
+  - testhelper
+  - testhelper/client
+  - openstack/identity/v2/tenants
+- name: github.com/valyala/fasthttp
+  version: 8db7d05839b5f4d21d5da1fcb3897d294ff6fd9f
+  subpackages:
+  - fasthttputil
+- name: github.com/valyala/fasttemplate
+  version: 3b874956e03f1636d171bda64b130f9135f42cff
+- name: golang.org/x/net
+  version: 3f122ce3dbbe488b7e6a8bdb26f41edec852a40b
+  subpackages:
+  - context
+- name: golang.org/x/sys
+  version: 7f918dd405547ecb864d14a8ecbbfe205b5f930f
+  subpackages:
+  - unix
+- name: gopkg.in/alecthomas/kingpin.v2
+  version: 8cccfa8eb2e3183254457fb1749b2667fbc364c7
+devImports: []
